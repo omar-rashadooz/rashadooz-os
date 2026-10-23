@@ -41,7 +41,7 @@ RASHADOOZ OS is a minimal operating system built on the **Linux kernel** with a 
 
 | File | Size |
 |------|------|
-| `rashadooz-os.iso` | **28 MB** |
+| `rashadooz_os.iso` | **28 MB** |
 
 > Get the latest ISO from the [Releases](../../releases) page.
 
@@ -58,13 +58,13 @@ qemu-system-x86_64 -m 128 -cdrom rashadooz_os.iso
 1. Create a new **Linux (64-bit)** virtual machine
 2. Set memory to **128 MB**
 3. Skip virtual hard disk creation
-4. Attach `rashadooz-os.iso` as the optical drive and start the VM
+4. Attach `rashadooz_os.iso` as the optical drive and start the VM
 
 ### Write to a USB drive
 
 ```bash
 # Replace /dev/sdX with your USB device. This ERASES it!
-sudo dd if=rashadooz-os.iso of=/dev/sdX bs=4M status=progress && sync
+sudo dd if=rashadooz_os.iso of=/dev/sdX bs=4M status=progress && sync
 ```
 
 ## Usage
@@ -79,13 +79,6 @@ help          # list available commands
 poweroff      # shut down
 ```
 
-## Building
-
-```bash
-git clone https://github.com/<your-username>/rashadooz-os.git
-cd rashadooz-os
-# add your build steps here (kernel, rootfs, ISO)
-```
 
 ## Project Structure
 
@@ -96,15 +89,10 @@ rashadooz-os/
 └── rashadooz_os.zip   (compressed os in .zip)
 ```
 
-## Credits
-
-- Linux kernel: <https://kernel.org>
-- Wallpaper: wolf photo used as RASHADOOZ OS branding
-
 ## License
 
 The Linux kernel is licensed under GPLv2. Add your own license for RASHADOOZ OS-specific files.
 
 ---
 
-<div align="center">Made with 🐺 by <b>RASHADOOZ</b></div>
+<div align="center">Made with 🦅 by <b>RASHADOOZ</b></div>
