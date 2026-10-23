@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="rashadooz-os-logo.png" alt="RASHADOOZ OS" width="300">
+<img src="rashadooz_os_logo.png" alt="RASHADOOZ OS" width="300">
 
 # RASHADOOZ OS
 
@@ -9,7 +9,7 @@
 ![RAM](https://img.shields.io/badge/RAM-128%20MB-teal)
 ![ISO](https://img.shields.io/badge/ISO-28%20MB-blue)
 ![Kernel](https://img.shields.io/badge/Kernel-Linux-yellow)
-![Interface](https://img.shields.io/badge/Interface-CLI-black)
+![Interface](https://img.shields.io/badge/Interface-CLI-gray)
 
 </div>
 
@@ -50,7 +50,7 @@ RASHADOOZ OS is a minimal operating system built on the **Linux kernel** with a 
 ### Run in QEMU (128 MB RAM)
 
 ```bash
-qemu-system-x86_64 -m 128 -cdrom rashadooz-os.iso
+qemu-system-x86_64 -m 128 -cdrom rashadooz_os.iso
 ```
 
 ### Run in VirtualBox
@@ -93,7 +93,7 @@ cd rashadooz-os
 rashadooz-os/
 ├── README.md
 ├── rashadooz-os-wallpaper.jpg
-└── rashadooz-os.iso   (release asset)
+└── rashadooz_os.zip   (compressed os in .zip)
 ```
 
 ## Credits
