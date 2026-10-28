@@ -9,7 +9,7 @@
 ![RAM](https://img.shields.io/badge/RAM-128%20MB-teal)
 ![ISO](https://img.shields.io/badge/ISO-28%20MB-blue)
 ![Kernel](https://img.shields.io/badge/Kernel-Linux-yellow)
-![Interface](https://img.shields.io/badge/Interface-CLI-gray)
+![Interface](https://img.shields.io/badge/Interface-CLI-green)
 
 </div>
 
@@ -21,19 +21,17 @@ RASHADOOZ OS is a minimal operating system built on the **Linux kernel** with a 
 
 ## Features
 
-- 🐧 Powered by the **Linux kernel**
 - 💻 **Command-line only**: no desktop, no bloat
-- 🧠 Runs in just **128 MB of RAM**
-- 💿 Tiny **28 MB ISO image**
-- ⚡ Fast boot
-- 🐺 Wolf-themed wallpaper and boot branding
+- 🧠 Runs in just **64 MB of RAM**
+- 💿 Tiny **less than 1 MB iamge iso**
+- ⚡ Fast boot 
 
 ## System Requirements
 
 | Component | Requirement |
 |-----------|-------------|
-| CPU       | x86 / x86_64 |
-| RAM       | **128 MB** minimum |
+| CPU       | x86 / x86_32 |
+| RAM       | **64 MB** minimum |
 | Storage   | Not required (runs live from ISO) |
 | Boot      | CD/DVD, USB, or virtual machine |
 
@@ -41,30 +39,30 @@ RASHADOOZ OS is a minimal operating system built on the **Linux kernel** with a 
 
 | File | Size |
 |------|------|
-| `rashadooz_os.iso` | **28 MB** |
+| `rashadooz_os.iso` | **556 KB** |
 
 > Get the latest ISO from the [Releases](../../releases) page.
 
 ## Quick Start
 
-### Run in QEMU (128 MB RAM)
+### Run in QEMU (64 MB RAM)
 
 ```bash
-qemu-system-x86_64 -m 128 -cdrom rashadooz_os.iso
+qemu-system-i386 -cdrom rashadooz.iso
 ```
 
 ### Run in VirtualBox
 
-1. Create a new **Linux (64-bit)** virtual machine
-2. Set memory to **128 MB**
+1. Create a new **(32-bit)** virtual machine
+2. Set memory to **64 MB**
 3. Skip virtual hard disk creation
-4. Attach `rashadooz_os.iso` as the optical drive and start the VM
+4. Attach `rashadooz.iso` as the optical drive and start the VM
 
 ### Write to a USB drive
 
 ```bash
 # Replace /dev/sdX with your USB device. This ERASES it!
-sudo dd if=rashadooz_os.iso of=/dev/sdX bs=4M status=progress && sync
+sudo dd if=rashadooz.iso of=/dev/sdX bs=4M status=progress && sync
 ```
 
 ## Usage
@@ -72,11 +70,13 @@ sudo dd if=rashadooz_os.iso of=/dev/sdX bs=4M status=progress && sync
 After boot you land in a Linux shell:
 
 ```bash
-uname -a      # kernel info
-free -m       # check memory usage
-ls            # list files
-help          # list available commands
-poweroff      # shut down
+help          # show this list of commands
+version       # print the operating system version
+info          # show details system information 
+ls            # list files and directories
+snake         # play snake game with (W A S D and Q)
+Tetris        # play Tetris game with (W A S D and Q)
+clear         # clear the screen 
 ```
 
 
@@ -86,13 +86,8 @@ poweroff      # shut down
 rashadooz-os/
 ├── README.md
 ├── rashadooz-os-wallpaper.jpg
-└── rashadooz_os.zip   (compressed os in .zip)
+└── rashadooz.iso   (the os iamge iso)
 ```
 
-## License
-
-The Linux kernel is licensed under GPLv2. Add your own license for RASHADOOZ OS-specific files.
-
----
 
 <div align="center">Made with 🦅 by <b>RASHADOOZ</b></div>
